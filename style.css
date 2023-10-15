@@ -13,6 +13,7 @@
   --surface-color: rgba(255, 255, 255, 0.05);
   --suface-color-houver: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light{
@@ -22,6 +23,7 @@
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-houver: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
@@ -63,17 +65,25 @@ body * {
 }
 
 /*switch*/
-#switch {
+#switch button{
   width: 32px;
   height: 32px;
   background: white ;
   border: 0;
   border-radius: 50%;
-  background-image: url(./assets/moon-stars.svg);
+  background-image: var(--switch-bg-url);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+#switch span {
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  
+}
 
 /*Links*/
 
